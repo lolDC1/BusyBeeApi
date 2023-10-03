@@ -1,0 +1,42 @@
+﻿version: "3.9"
+
+services:
+  busybee_api:
+    image: loldc1/busybee.api
+    container_name: busybee.api
+    restart: always
+    volumes:
+      - /var/www/images:/app/images
+      - /var/www/files:/app/files
+    depends_on:
+      - postgres_db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings:DefaultConnection=Host=postgres;Database=busy_bee_db;Username=postgres_username;Password=postgres_password
+      - AzureAdB2C:Instance=https://busybeeua.b2clogin.com
+      - AzureAdB2C:Domain=busybeeua.onmicrosoft.com
+      - AzureAdB2C:ClientId=44d3647b-fe43-4b84-bc50-7b99f37fd8f2
+      - AzureAdB2C:SignedOutCallbackPath=/signout/B2C_1_SignupSignin
+      - AzureAdB2C:SignUpSignInPolicyId=B2C_1_SignupSignin
+      - AzureAdB2C:OpenApiClientId=0e271133-d0bf-493a-976d-8146db6770a4
+      - AzureAdB2C:OpenApiScopeApi=https://busybeeua.onmicrosoft.com/api/main
+      - LocalStorage:ImagesUrlPrefix=/images/
+      - LocalStorage:ImagesFolderPath=images
+      - LocalStorage:FilesUrlPrefix=/files/
+      - LocalStorage:FilesFolderPath=files
+      - LocalStorage:CategoryIconFilenamePrefix=category_icon_
+      - LocalStorage:UserPhotoFilenamePrefix=user_photo_
+      - LocalStorage:PortfolioFilenamePrefix=portfolio_
+    ports:
+      - "127.0.0.1:8001:80"
+
+  postgres_db:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres_username
+      - POSTGRES_PASSWORD=postgres_password
+    ports:
+      - "5432:5432"
