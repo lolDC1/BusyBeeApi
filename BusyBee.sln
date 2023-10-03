@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B8CA54E6-B94F-4437-9389-67362944A1E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{93CE04F5-6BCB-4C1E-B9D0-73DCEC515F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusyBee.Core", "BusyBee.Core\BusyBee.Core.csproj", "{007B4F7B-5876-4809-ABDC-C72B99777069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusyBee.Persistence", "BusyBee.Persistence\BusyBee.Persistence.csproj", "{CC596D6D-D9AC-4EFA-908D-E88550ACCDD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusyBee.Api", "BusyBee.Api\BusyBee.Api.csproj", "{E9CD702C-B925-40A0-BBEA-C27AA6575180}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6747F575-2F1A-4F43-9F83-622778B4BB21}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		.gitignore = .gitignore
+		Dockerfile = Dockerfile
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusyBee.Storage", "BusyBee.Storage\BusyBee.Storage.csproj", "{7821C348-0262-47A9-888C-03FD68371BE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusyBee.Persistence.Design", "BusyBee.Persistence.Design\BusyBee.Persistence.Design.csproj", "{2821125E-194C-43E2-BFBA-54BA5F5D12E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{007B4F7B-5876-4809-ABDC-C72B99777069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007B4F7B-5876-4809-ABDC-C72B99777069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007B4F7B-5876-4809-ABDC-C72B99777069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007B4F7B-5876-4809-ABDC-C72B99777069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC596D6D-D9AC-4EFA-908D-E88550ACCDD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC596D6D-D9AC-4EFA-908D-E88550ACCDD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC596D6D-D9AC-4EFA-908D-E88550ACCDD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC596D6D-D9AC-4EFA-908D-E88550ACCDD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9CD702C-B925-40A0-BBEA-C27AA6575180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9CD702C-B925-40A0-BBEA-C27AA6575180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9CD702C-B925-40A0-BBEA-C27AA6575180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9CD702C-B925-40A0-BBEA-C27AA6575180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7821C348-0262-47A9-888C-03FD68371BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7821C348-0262-47A9-888C-03FD68371BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7821C348-0262-47A9-888C-03FD68371BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7821C348-0262-47A9-888C-03FD68371BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2821125E-194C-43E2-BFBA-54BA5F5D12E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2821125E-194C-43E2-BFBA-54BA5F5D12E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2821125E-194C-43E2-BFBA-54BA5F5D12E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2821125E-194C-43E2-BFBA-54BA5F5D12E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{93CE04F5-6BCB-4C1E-B9D0-73DCEC515F5A} = {B8CA54E6-B94F-4437-9389-67362944A1E7}
+		{007B4F7B-5876-4809-ABDC-C72B99777069} = {B8CA54E6-B94F-4437-9389-67362944A1E7}
+		{CC596D6D-D9AC-4EFA-908D-E88550ACCDD8} = {93CE04F5-6BCB-4C1E-B9D0-73DCEC515F5A}
+		{E9CD702C-B925-40A0-BBEA-C27AA6575180} = {B8CA54E6-B94F-4437-9389-67362944A1E7}
+		{7821C348-0262-47A9-888C-03FD68371BE1} = {93CE04F5-6BCB-4C1E-B9D0-73DCEC515F5A}
+		{2821125E-194C-43E2-BFBA-54BA5F5D12E5} = {93CE04F5-6BCB-4C1E-B9D0-73DCEC515F5A}
+	EndGlobalSection
+EndGlobal
